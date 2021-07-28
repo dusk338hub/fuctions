@@ -1,0 +1,30 @@
+void gfs(int n,int four,int seven)
+{
+    if(n > 100000000000LL)
+        return;
+    if(four == seven && n != 0)
+        v_lucky.push_back(n);
+        gfs(n*10+4,four+1,seven);
+        gfs(n*10+7,four,seven+1);
+}
+main()
+{
+   
+    gfs(0,0,0);
+        sort(v_lucky.begin(),v_lucky.end());
+    
+    return 0;
+}
+=================================
+void get_final_lucky(ll x)
+{
+    if (x>1e10)
+        return;
+    if (x>0)
+    {
+        final_luckyNum.push_back(x);
+    }
+    get_final_lucky(x*10+4);
+    get_final_lucky(x*10+7);
+
+}

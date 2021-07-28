@@ -1,0 +1,10 @@
+int bin_to_dec(string bin)
+{
+    int dec=0,mul=1;
+    for(int i=bin.size()-1;i>=0;i--)
+    {
+        dec+=(bin[i]-'0')*mul;
+        mul*=2;
+    }
+    return dec;
+}

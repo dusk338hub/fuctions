@@ -1,0 +1,16 @@
+ll GCD(ll a, ll b)
+{
+    if (a%b == 0)
+        return b;
+    return GCD(b % a, a);
+}
+ll GCD_array(ll a[],ll n)
+{
+    ll current_GCD=a[0];
+    for(int i=1;i<n;i++)
+    {
+        current_GCD=GCD(current_GCD,a[i]);
+    }
+    return current_GCD;
+
+}

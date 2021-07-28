@@ -1,0 +1,11 @@
+void rvereseArray(long long arr[], long long   start, long long  end)
+{
+    while (start < end)
+    {
+        int temp = arr[start];
+        arr[start] = arr[end];
+        arr[end] = temp;
+        start++;
+        end--;
+    }
+}

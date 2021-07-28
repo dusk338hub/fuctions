@@ -1,0 +1,11 @@
+string dec_to_bin(int dec)
+{
+    string bin;
+    while (dec)
+    {
+        bin+=((dec%2)+'0');
+        dec/=2;
+    }
+    reverse(bin.begin(),bin.end());
+    return bin;
+}
